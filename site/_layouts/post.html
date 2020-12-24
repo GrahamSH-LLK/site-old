@@ -8,10 +8,13 @@ layout: default
   <p class="mt-2">{{ page.date | date_to_string }} - {{ page.author }}</p>
 
   {{ content }}
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
-
+<script src="https://utteranc.es/client.js"
+        repo="grahamsh-llk/grahamsh-llk.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
   <div class="row">
     <div class="col text-left">
       {% if page.previous.url %} <a href="{{page.previous.url | remove: ".html"}}">« {{page.previous.title}}</a> {% endif %}
