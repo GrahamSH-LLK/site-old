@@ -8,6 +8,10 @@ layout: default
   <p class="mt-2">{{ page.date | date_to_string }} - {{ page.author }}</p>
 
   {{ content }}
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
+
   <div class="row">
     <div class="col text-left">
       {% if page.previous.url %} <a href="{{page.previous.url | remove: ".html"}}">« {{page.previous.title}}</a> {% endif %}
@@ -17,6 +21,7 @@ layout: default
       {% if page.next.url %}<a href="{{page.next.url | remove: ".html"}}"> {{page.next.title}} »</a> {% endif %}
     </div>
   </div>
+  
   {% if site.related_posts.size >= 1 %}
 <div>
   <h3>Related Posts</h3>
