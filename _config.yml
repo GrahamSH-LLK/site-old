@@ -32,3 +32,5 @@ autoprefixer:
 jekyll-minifier:
   uglifier_args:
     harmony: true
+disqus:
+  shortname: grahamsh
