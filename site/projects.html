@@ -1,0 +1,30 @@
+---
+layout: default
+title: projects
+description: This page lists all of the projects that are implemented on Scratch projects.
+---
+
+
+<h1>My Projects</h1>
+
+<div class="container">
+
+
+
+	<div class="card-columns">
+		{% for project in site.data.projects %}
+			<div class="card">
+				{% capture image %}{% file_exists {{ project.image }} %}{% endcapture %}
+				{% if image == "true" %}
+					<img src="{{ project.image }}" class="card-img-top" alt="{{ project.name }}">
+				{% endif %}
+				<div class="card-body">
+					<h5 class="card-title">{{ project.name }}</h5>
+					<h6 class="card-subtitle mb-2 text-muted">{{ project.id }}</h6>
+					<p class="card-text">{{ project.description }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+</div>
