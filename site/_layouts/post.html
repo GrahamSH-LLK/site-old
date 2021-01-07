@@ -23,6 +23,10 @@ layout: default
   
 
   {{ content }}
+  {% unless page.noComments %}
+
+
+  <h2>Comments</h2>
 <script src="https://utteranc.es/client.js"
         repo="grahamsh-llk/site"
         issue-term="title"
@@ -30,6 +34,7 @@ layout: default
         crossorigin="anonymous"
         async>
 </script>
+  {% endunless %}
   <div class="row">
     <div class="col text-left">
       {% if page.previous.url %} <a href="{{page.previous.url | remove: ".html"}}">« {{page.previous.title}}</a> {% endif %}
