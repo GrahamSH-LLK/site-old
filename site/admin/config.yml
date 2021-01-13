@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-media_folder: 'assets/uploads'
+media_folder: 'site/assets/'
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: '_posts/'
+    folder: 'site/_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
