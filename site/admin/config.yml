@@ -22,7 +22,7 @@ collections:
     files:
       - label: "Navigation"
         name: "navigation"
-        file: "_data/navigation.yml"
+        file: "site/_data/navigation.yml"
         fields:
           - label: "Navigation Items"
             name: "items"
