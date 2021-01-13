@@ -6,6 +6,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'site/_posts/'
+    format: 'frontmatter'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
