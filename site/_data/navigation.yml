@@ -1,6 +1,7 @@
-- name: Blog
-  link: /blog
-- name: Contact
-  link: /contact
-- name: About
-  link: /about
+items:
+  - name: Blog
+    link: /blog
+  - name: Contact
+    link: /contact
+  - name: About
+    link: /about
