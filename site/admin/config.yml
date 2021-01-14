@@ -12,7 +12,7 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Layout', name: 'layout', widget: 'string', default: 'post' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Categories (Comma Seperated)', name: categories, widget: string }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
