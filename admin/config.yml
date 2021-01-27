@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: 'site/assets/images'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'site/_posts/'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'string', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Categories (Comma Seperated)', name: categories, widget: string }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "config"
+    label: "Config"
+    editor:
+      preview: false
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "site/_data/navigation.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Link, name: link, widget: string}
+
+
